@@ -1,12 +1,9 @@
 /* ----------------------------------------------------
 * DBS211 SECTION - NEE
-
 * DATABASE APPLICATION DEVELOPMENT ASSIGNMENT
-
 * MILESTONE 1 AND 2 COMBINED (SINGLE SUBMISSION)
 
 /*system libraries */
-
 
 #include <iostream>
 #include <occi.h>
@@ -368,7 +365,7 @@ void insertEmployee(Connection* conn, struct Employee emp)
         conn->commit();
         conn->terminateStatement(stmt);
     }
-    /* Error? */
+ 
     catch (SQLException& sqlExcp)
     {
         cout << sqlExcp.getErrorCode() << ": " << sqlExcp.getMessage();
